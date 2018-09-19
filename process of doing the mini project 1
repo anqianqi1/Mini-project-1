@@ -1,11 +1,15 @@
 OVERVIEW
+
+  twitter.py
   1.we need to use twitter api, create a new developer account, create an app, get the credential keys. Then I get the twitter of specfic
   account. Then use the 'media_url' to get the url of the images of twitters. After that I downloaded the images to a folder.
   
+  googlevision.py
   2.Use the google vision api to get the labels of images, and you can add the labels into the image if you want.
   Create a google-cloud account and then create a project and get the key of google vision api and download the service account key.
   Then I get the code from the google website. 
   
+  ffmpeg.py
   3.use ffmpeg to convert the images into video
   first download the ffmpeg applicaiton and use pip install ffmpeg to install it into conputer. Then use 'subprocess' to call ffmpeg 
   application from the pothon file. Then I got the code that convert the images into vidoes and write it into the python file.
