@@ -2,23 +2,21 @@
 # encoding: utf-8
 #Author - Anqi Guo
 
-import wget
 import tweepy #https://github.com/tweepy/tweepy
 import json
 import urllib.request
 import os
 
 
-#Twitter API credentials
+#this is the twitter api credentials that we get from the twitter developer website, we need this credential keys to access the twitter api
 consumer_key = "jTC38AzwtgHKzLvusvOHm1ni4"
 consumer_secret = "H1WnO5q4oIq0VRs9coqJ5BjSmkIcx2DEhoXBOz77JaI7k0wboJ"
 access_key = "1039258380504846341-VzdOeFASNH5Kr2DSqLTtg7yIfIVEVy"
 access_secret = "Fcwy6ArMGLJoIrEZUOT4Rp4J8E36FOt6nNPUF5NABEBWh"
 
-
-def get_all_tweets(screen_name):
+#this is the funcation that we get all the twitters from the specefic user
+de get_all_tweets(screen_name):
     
-    #Twitter only allows access to a users most recent 3240 tweets with this method
     
     #authorize twitter, initialize tweepy
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
@@ -52,32 +50,23 @@ def get_all_tweets(screen_name):
             break
         print("...%s tweets downloaded so far" % (len(alltweets)))
        
-    #write tweet objects to JSON
-    # file = open('tweet.json', 'w') 
-    # print("Writing tweet objects to JSON please wait...")
-    # for status in alltweets:
-    #     json.dump(status._json,file,sort_keys = True,indent = 4)
-    
-    
-    # file.close()
 
+#to get all the urls that in the json file
     for status in alltweets:
-    	#print(status.extended_entities)
-    	# print(status.extended_entities.get('media'))
     	a = status.extended_entities.get('media')
-    	# print(range(4))
-    	# print(range(len(a)))
+#extract the media_url from media
     	for i in range(0,len(a)):
     		# print (a[i])
     		url=a[i]['media_url']
     		fullfilename=os.path.join('/home/ece-student/EC 601/image/','img00'+str(i)+'.jpg')
     		urllib.request.urlretrieve(url, fullfilename)
-    		print(url, fullfilename)
+#download all the images from each image urls
 
     		print(a[i]['media_url'])
+#print all the media urls
     		
     	
-    	
+ #realise all the twitter urls   	
 if __name__ == '__main__':
-    #pass in the username of the account you want to download
+  #download images from anqiguo3
     get_all_tweets("@anqiguo3")
