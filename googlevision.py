@@ -1,26 +1,17 @@
-
+#Author Anqi Guo
 import io
 import os
 from google.cloud import vision
 from google.cloud.vision import types
 
 def detect_labels(file_name):
-    """Detects labels in the file."""
+#Dtects labels in the file
     client = vision.ImageAnnotatorClient()
 
-# 
-#    file_name = os.path.join(
- #       os.path.dirname('_file_'),
- #       'img000.jpg')
-    # for file in os.listdir():
-    #     if file.endswith(".jpg"):
-    #         file_name=os.path.join(os.listdir(),file)
-
-    # file_name='./img000.jpg'
-    
+#extract the image file    
     with io.open(file_name, 'rb') as image_file:
         content = image_file.read()
-
+#use google api to detect the labels of image
     image = vision.types.Image(content=content)
 
     response = client.label_detection(image=image)
@@ -31,7 +22,7 @@ def detect_labels(file_name):
         print(label.description)
 
 
-
+#because I downlad 4 images so I used a for loop
 if __name__ == '__main__':
     for i in range(4):
         detect_labels('./img00'+str(i)+'.jpg')
