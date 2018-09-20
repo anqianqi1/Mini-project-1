@@ -1,16 +1,32 @@
 OVERVIEW
 
   twitter.py
-  1.we need to use twitter api, create a new developer account, create an app, get the credential keys. Then I get the twitter of specfic
-  account. Then use the 'media_url' to get the url of the images of twitters. After that I downloaded the images to a folder.
+  1.to use twitter api,first download the tweepy library and install it into the environment and be able to import it, create a new 
+  developer account, create an app, get the credential keys. Then I get the twitter of specficaccount. Then use the 'media_url' to 
+  get the url of the images of twitters. After that I downloaded the images to a folder.
+ 
   
   googlevision.py
   2.Use the google vision api to get the labels of images, and you can add the labels into the image if you want.
-  Create a google-cloud account and then create a project and get the key of google vision api and download the service account key.
+  import the google cloud and google cloud vision into the environent. Create a google-cloud account and then create 
+  a project and get the key of google vision api and download the service account key.
   Then I get the code from the google website. 
   
   ffmpeg.py
   3.use ffmpeg to convert the images into video
   first download the ffmpeg applicaiton and use pip install ffmpeg to install it into conputer. Then use 'subprocess' to call ffmpeg 
   application from the pothon file. Then I got the code that convert the images into vidoes and write it into the python file.
+  
+  
+  
+  problem that I faced:
+  1.when the google vision script do not know where the credential file is. I need to type ~/source and tell it where the credential json
+  file is. The json file is download into the folder which the project script is.
+  
+  2. the google api can only deal with one image once. So I made a for loop in the end of the google api script. to make the google api work 
+  several times and works out labels of all images.
+  
+  3. At first I was working in windows environment. So I had trouble installing the ffmpeg software. So I use the vertual box and successfully
+  install ffmpeg in linux system.And in pypthon script, it always tells me that it could not find the dictory. And I askd my classmates. 
+  Thanks to him, I made the script worked.
   
