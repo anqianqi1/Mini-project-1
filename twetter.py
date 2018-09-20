@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # encoding: utf-8
-#Author - Prateek Mehta
+#Author - Anqi Guo
 
 import wget
 import tweepy #https://github.com/tweepy/tweepy
