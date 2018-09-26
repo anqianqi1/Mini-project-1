@@ -15,7 +15,7 @@ access_key = "1039258380504846341-VzdOeFASNH5Kr2DSqLTtg7yIfIVEVy"
 access_secret = "Fcwy6ArMGLJoIrEZUOT4Rp4J8E36FOt6nNPUF5NABEBWh"
 
 #this is the funcation that we get all the twitters from the specefic user
-de get_all_tweets(screen_name):
+def get_all_tweets(screen_name):
     
     
     #authorize twitter, initialize tweepy
