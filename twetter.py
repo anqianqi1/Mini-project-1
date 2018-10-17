@@ -9,10 +9,10 @@ import os
 
 
 #this is the twitter api credentials that we get from the twitter developer website, we need this credential keys to access the twitter api
-consumer_key = "jTC38AzwtgHKzLvusvOHm1ni4"
-consumer_secret = "H1WnO5q4oIq0VRs9coqJ5BjSmkIcx2DEhoXBOz77JaI7k0wboJ"
-access_key = "1039258380504846341-VzdOeFASNH5Kr2DSqLTtg7yIfIVEVy"
-access_secret = "Fcwy6ArMGLJoIrEZUOT4Rp4J8E36FOt6nNPUF5NABEBWh"
+consumer_key = ""
+consumer_secret = ""
+access_key = ""
+access_secret = ""
 
 #this is the funcation that we get all the twitters from the specefic user
 def get_all_tweets(screen_name):
